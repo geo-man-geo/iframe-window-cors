@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <br />
+    <button id="close-iframe-btn">CLOSE THIS IFRAME</button>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      document.getElementById('close-iframe-btn').addEventListener('click', function() {
+        // Send a message to the parent window to close the iframe
+        window.parent.postMessage('close-iframe', 'https://66e3e5f34d7336c93cabdb66--resplendent-khapse-7fbb3d.netlify.app/'); // Use '*' to allow any origin, or specify the exact origin
+      });
+    </script>
+  
+  </body>
+</html>
